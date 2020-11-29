@@ -7,11 +7,13 @@
  */
 
 plugins {
+
+    id 'java'
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+
     // https://imperceptiblethoughts.com/shadow/getting-started/#default-java-groovy-tasks
     id 'com.github.johnrengelman.shadow' version '6.1.0'
-
 }
 
 repositories {
@@ -41,12 +43,16 @@ dependencies {
 
 
 application {
+    
+    mainClassName = 'omerHw2Project.app.App'
     // Define the main class for the application.
     mainClass = 'omerHw2Project.app.App'
-    mainClassName = 'omerHw2Project.app.App'
 }
+task stage(dependsOn: ['shadowJar'])
+shadowJar.mustRunAfter clean
 
 tasks.named('test') {
     // Use junit platform for unit tests.
     useJUnitPlatform()
 }
+
