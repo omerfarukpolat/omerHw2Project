@@ -41,7 +41,6 @@ dependencies {
 
 }
 
-
 application {
     
     mainClassName = 'omerHw2Project.app.App'
