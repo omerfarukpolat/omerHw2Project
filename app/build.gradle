@@ -44,9 +44,9 @@ dependencies {
 
 application {
     
-    mainClassName = 'omerHw2Project.app.src.main.java.omerHw2Project.App'
+    mainClassName = 'omerHw2Project.app.App'
     // Define the main class for the application.
-    mainClass = 'omerHw2Project.app.src.main.java.omerHw2Project.App'
+    mainClass ='omerHw2Project.app.App'
 }
 task stage(dependsOn: ['shadowJar'])
 shadowJar.mustRunAfter clean
