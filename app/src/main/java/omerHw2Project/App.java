@@ -10,6 +10,7 @@ import static spark.Spark.post;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.*; 
 import static spark.Spark.port;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
@@ -51,6 +52,10 @@ public class App {
             return list;
         }
     public static void main(String[] args) {
+
+      int port = Integer.parseInt(System.getenv("PORT"));
+      port(port);
+
         port(getHerokuAssignedPort());
 
         get("/", (req, res) -> "Hello, World");
