@@ -43,13 +43,10 @@ dependencies {
 
 application {
     
-    mainClassName = 'omerHw2Project.app.App'
+    mainClassName = 'omerHw2Project.App'
     // Define the main class for the application.
-    mainClass ='omerHw2Project.app.App'
+    mainClass ='omerHw2Project.App'
 }
-task stage(dependsOn: ['shadowJar'])
-shadowJar.mustRunAfter clean
-
 tasks.named('test') {
     // Use junit platform for unit tests.
     useJUnitPlatform()
