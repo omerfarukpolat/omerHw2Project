@@ -53,10 +53,10 @@ public class App {
         }
     public static void main(String[] args) {
 
+      port(getHerokuAssignedPort());
       int port = Integer.parseInt(System.getenv("PORT"));
       port(port);
 
-        port(getHerokuAssignedPort());
 
         get("/", (req, res) -> "Hello, World");
 
